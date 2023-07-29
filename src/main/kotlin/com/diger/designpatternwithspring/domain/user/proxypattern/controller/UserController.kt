@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/v1/proxy")
 class UserController(
-    private val userProxyService: UserProxyService
+    private val postProxyService: UserProxyService
 ) {
 
     @PostMapping
     fun createUser(@RequestBody createUserRequest: CreateUserRequest) {
-        userProxyService.createUser(createUserRequest.loginId, createUserRequest.password)
+        postProxyService.createUser(createUserRequest.loginId, createUserRequest.password)
     }
 }

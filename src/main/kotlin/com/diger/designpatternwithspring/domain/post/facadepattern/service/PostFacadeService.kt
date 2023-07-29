@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 @Transactional
 class PostFacadeService(
-    private val fpPostService: FPPostService,
+    private val postService: PostService,
 
     ) {
 }

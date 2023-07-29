@@ -12,7 +12,7 @@ class UserProxyServiceImpl(
 ) : UserProxyService {
 
     override fun createUser(loginId: String, password: String): User {
-        println("로깅을 수행합니다. log4j는 귀찮아서 추가를 안했슴다.")
+        // 핵심 로직
         return userRepository.save(
             User(
                 loginId = loginId,
@@ -20,6 +20,12 @@ class UserProxyServiceImpl(
                 point = 0,
             )
         )
-        println("유저를 생성하는 로그를 기록했습니다.")
+
+        // 부가 로직
+        logPosting()
+    }
+
+    private fun logPosting() {
+        println("게시글을 생성하는 로그를 기록했습니다.")
     }
 }
