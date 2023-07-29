@@ -1,6 +1,6 @@
 package com.diger.designpatternwithspring.domain.user.strategypattern.service.strategy
 
-import org.apache.catalina.User
+import com.diger.designpatternwithspring.domain.user.User
 import org.springframework.stereotype.Component
 
 @Component

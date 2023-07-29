@@ -17,7 +17,7 @@ class UserFacadeService(
         postService.createPost(
             title = "${loginId} 님의 회원가입 환영 게시글입니다.",
             content = "모두 환영해주세요!",
-            user = createUser
+            userId = createUser.id
         )
     }
 }

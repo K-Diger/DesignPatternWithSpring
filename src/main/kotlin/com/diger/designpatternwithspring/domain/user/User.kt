@@ -9,25 +9,25 @@ import java.time.LocalDateTime
 @Entity
 class User(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private var id: Long = 0L,
+    var id: Long = 0L,
 
     @Column
-    private val loginId: String,
+    val loginId: String,
 
     @Column
-    private val password: String,
+    val password: String,
 
     @Column
-    private var point: Int,
+    var point: Int,
 
     @Column
     var grade: Grade = Grade.NORMAL,
 
     @CreatedDate
-    private var createdAt: LocalDateTime = LocalDateTime.now(),
+    var createdAt: LocalDateTime = LocalDateTime.now(),
 
     @UpdateTimestamp
-    private var updatedAt: LocalDateTime = LocalDateTime.now()
+    var updatedAt: LocalDateTime = LocalDateTime.now()
 ) {
 
     fun updatePoint(strategy: PointStrategy) {
